@@ -1,3 +1,9 @@
+@import '../styles/variables';
+
+body {
+  background-color: $base-color;
+}
+
 .App {
   text-align: center;
 }

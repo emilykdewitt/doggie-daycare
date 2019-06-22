@@ -44,6 +44,33 @@ const dogs = [
     isPettable: true,
     furType: 'fluffy',
   },
+  {
+    id: 'dog6',
+    imageUrl: 'https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/12/SEI_44690013-fec1.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1',
+    name: 'Beethoven',
+    disposition: 'flirty',
+    faveTreat: 'cookies',
+    isPettable: true,
+    furType: 'fluffy',
+  },
+  {
+    id: 'dog7',
+    imageUrl: 'https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/12/SEI_44690013-fec1.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1',
+    name: 'Beethoven',
+    disposition: 'flirty',
+    faveTreat: 'cookies',
+    isPettable: true,
+    furType: 'fluffy',
+  },
+  {
+    id: 'dog8',
+    imageUrl: 'https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/12/SEI_44690013-fec1.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1',
+    name: 'Beethoven',
+    disposition: 'flirty',
+    faveTreat: 'cookies',
+    isPettable: true,
+    furType: 'fluffy',
+  },
 ];
 
 export default dogs;

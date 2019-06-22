@@ -1,33 +1,38 @@
 const employees = [
   {
     id: 'employee1',
-    imageUrl: 'https://images.immediate.co.uk/production/volatile/sites/3/2016/03/Simpsons_g2013_R1_marge-04bf0d1.jpg?quality=45&crop=3px,170px,1884px,1255px&resize=620,413',
+    imageUrl: 'https://walnutstreetah.com/wp-content/uploads/2019/02/Capital-Blvd-Animal-Hospital-Raleigh-NC.jpg',
     name: 'Marge',
-    disposition: 'friendly',
+    job: 'veterinarian',
+    faveDogBreed: 'Labrador',
   },
   {
     id: 'employee2',
-    imageUrl: 'http://interactive.nydailynews.com/2016/05/simpsons-quiz/img/simp1.jpg',
     name: 'Homer',
-    disposition: 'goofy',
+    imageUrl: 'https://st2.depositphotos.com/3662505/6397/i/950/depositphotos_63976241-stock-photo-veterinarian.jpgr',
+    job: 'groomer',
+    faveDogBreed: 'Pitbull',
   },
   {
     id: 'employee3',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png',
+    imageUrl: 'https://www.petcarevb.com/images/dr-fisher-flip-card.jpg',
     name: 'Bart',
-    disposition: 'mischievous',
+    job: 'custodian',
+    faveDogBreed: 'Dalmatian',
   },
   {
     id: 'employee4',
-    imageUrl: 'https://www.stickpng.com/assets/images/5a0c40b85a997e1c2cea116e.png',
+    imageUrl: 'https://jonesvillevet.com/wp-content/uploads/2018/08/Layer-3.jpg',
     name: 'Lisa',
-    disposition: 'curious',
+    job: 'groomer',
+    faveDogBreed: 'Spitz',
   },
   {
     id: 'employee5',
-    imageUrl: 'https://static.simpsonswiki.com/images/9/9d/Maggie_Simpson.png',
+    imageUrl: 'https://www.careergirls.org/wp-content/uploads/2018/05/Vet_1920x1080.jpg',
     name: 'Maggie',
-    disposition: 'sassy',
+    job: 'acupuncturist',
+    faveDogBreed: 'Irish Wolfhound',
   },
 ];
 

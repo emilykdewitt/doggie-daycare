@@ -44,6 +44,33 @@ const dogs = [
     isPettable: true,
     furType: 'fluffy',
   },
+  {
+    id: 'dog6',
+    imageUrl: 'https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg',
+    name: 'Willy',
+    disposition: 'derpy',
+    faveTreat: 'milk bones',
+    isPettable: true,
+    furType: 'sleek',
+  },
+  {
+    id: 'dog7',
+    imageUrl: 'https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/cocker-spaniel.jpg?bust=1540330455',
+    name: 'Margaret',
+    disposition: 'pretentious',
+    faveTreat: 'caviar',
+    isPettable: true,
+    furType: 'long',
+  },
+  {
+    id: 'dog8',
+    imageUrl: 'https://www.guidedogs.org/wp-content/uploads/2015/05/Dog-Im-Not.jpg',
+    name: 'George',
+    disposition: 'loyal',
+    faveTreat: 'potato chips',
+    isPettable: true,
+    furType: 'short-haired',
+  },
 ];
 
 export default dogs;

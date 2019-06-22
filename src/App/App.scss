@@ -29,6 +29,24 @@ body {
   color: #61dafb;
 }
 
+.page-title {
+  font-size: 4em;
+  color: rgb(1, 1, 53);
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.our-dogs-title {
+  font-size: 2em;
+  color: rgb(68, 66, 66);
+  text-align: left
+}
+
+.our-staff-title {
+  font-size: 2em;
+  color: rgb(68, 66, 66);
+  text-align: left
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

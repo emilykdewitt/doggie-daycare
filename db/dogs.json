@@ -4,7 +4,7 @@
     "name": "Ralph",
     "disposition": "prissy",
     "faveTreat": "carrot sticks",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "fluffy"
   },
   "dog2": {
@@ -12,7 +12,7 @@
     "name": "Snowball",
     "disposition": "sweet",
     "faveTreat": "rawhide",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "scruffy"
   },
   "dog3": {
@@ -20,7 +20,7 @@
     "name": "Lucky",
     "disposition": "feisty",
     "faveTreat": "ice cream",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "sleek"
   },
   "dog4": {
@@ -28,7 +28,7 @@
     "name": "Bullseye",
     "disposition": "shy",
     "faveTreat": "dentastix",
-    "isPettable": "false",
+    "isPettable": false,
     "furType": "wiry"
   },
   "dog5": {
@@ -36,7 +36,7 @@
     "name": "Beethoven",
     "disposition": "flirty",
     "faveTreat": "cookies",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "fluffy"
   },
   "dog6": {
@@ -44,7 +44,7 @@
     "name": "Willy",
     "disposition": "derpy",
     "faveTreat": "milk bones",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "sleek"
   },
   "dog7": {
@@ -52,7 +52,7 @@
     "name": "Margaret",
     "disposition": "pretentious",
     "faveTreat": "caviar",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "long"
   },
   "dog8": {
@@ -60,7 +60,7 @@
     "name": "George",
     "disposition": "loyal",
     "faveTreat": "potato chips",
-    "isPettable": "true",
+    "isPettable": true,
     "furType": "short-haired"
   }
 }

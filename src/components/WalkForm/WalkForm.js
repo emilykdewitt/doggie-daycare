@@ -1,8 +1,18 @@
 import React from 'react';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 import NewWalkData from '../../helpers/data/newWalkData';
 
 class Form extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false,
+    };
+  }
+
   state = {
     dogId: '',
     employeeId: '',
@@ -14,6 +24,12 @@ class Form extends React.Component {
       [e.target.name]: e.target.value,
     });
   };
+
+  toggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen,
+    }));
+  }
 
   addWalk = (e) => {
     e.preventDefault();
@@ -36,30 +52,46 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
-        <input
-        name='dogId'
-        placeholder='Dog Id'
-        value={this.state.dogId}
-        onChange={e => this.change(e)}
-        />
-        <br />
-        <input
-        name='employeeId'
-        placeholder='Employee Id'
-        value={this.state.employeeId}
-        onChange={e => this.change(e)}
-        />
-        <br />
-        <input
+      <React.Fragment>
+      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle caret>
+          Dogs
+        </DropdownToggle>
+        <DropdownMenu name='dogName' placeholder='Dog Name' value={this.state.dogName} onChange={e => this.change(e)}>
+          <DropdownItem>Ralphie</DropdownItem>
+          <DropdownItem>Snowball</DropdownItem>
+          <DropdownItem>Lucky</DropdownItem>
+          <DropdownItem>Bullseye</DropdownItem>
+          <DropdownItem>Beethoven</DropdownItem>
+          <DropdownItem>Willy</DropdownItem>
+          <DropdownItem>Margaret</DropdownItem>
+          <DropdownItem>George</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+      <br />
+      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle caret>
+          Employees
+        </DropdownToggle>
+        <DropdownMenu name='employeeName' placeholder='Employee Name' value={this.state.employeeName} onChange={e => this.change(e)}>
+          <DropdownItem>Margie</DropdownItem>
+          <DropdownItem>Homer</DropdownItem>
+          <DropdownItem>Bart</DropdownItem>
+          <DropdownItem>Lisa</DropdownItem>
+          <DropdownItem>Maggie</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+      <br />
+      <input
         name='date'
         placeholder='Date'
         value={this.state.date}
         onChange={e => this.change(e)}
-        />
-        <br />
-        <button onClick={e => this.addWalk(e)}>Submit</button>
-      </form>
+      />
+      <br />
+      <button onClick={e => this.addWalk(e)}>Submit</button>
+
+    </React.Fragment>
     );
   }
 }

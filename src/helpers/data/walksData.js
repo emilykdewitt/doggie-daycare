@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import firebaseConfig from '../apiKeys.json';
+import apiKeys from '../apiKeys';
 
-const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
+const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getWalks = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/walks.json`)
+  axios.get(`${firebaseUrl}/walks.json`)
     .then((res) => {
       const walks = [];
       Object.keys(res.data).forEach((fbKey) => {
@@ -17,4 +17,8 @@ const getWalks = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getWalks };
+const addNewWalk = walkObject => axios.post(`${firebaseUrl}/walks.json`, walkObject);
+
+const deleteWalk = walkId => axios.delete(`${firebaseUrl}/walks/${walkId}.json`);
+
+export default { getWalks, addNewWalk, deleteWalk };

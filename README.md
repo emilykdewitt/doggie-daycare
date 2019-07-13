@@ -6,7 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This website allows the user (hypothetically the manager of the Doggie Daycare) to schedule employees to walk their dog clients at a specified date and time.
 
 ## Screenshots
-![Image of the Doggie Daycare website.](URL "screenshot of Doggy Day Care scheduling component.")
+### Schedule:
+![Image of the Doggie Daycare schedule.](https://github.com/emilykdewitt/doggie-daycare/blob/master/screenshots/schedule-screenshot.png "screenshot of Doggy Day Care scheduling component.")
+
+### Dogs:
+![Image of the Doggie Daycare dogs.](https://raw.githubusercontent.com/emilykdewitt/doggie-daycare/master/screenshots/dogs-screenshot.png "screenshot of Doggy Day Care dog clients.")
+
+### Employees:
+![Image of the Doggie Daycare employees.](https://raw.githubusercontent.com/emilykdewitt/doggie-daycare/master/screenshots/employees-screenshot.png "screenshot of Doggy Day Care employees.")
 
 ## Installation Instructions
 * Clone down this repo

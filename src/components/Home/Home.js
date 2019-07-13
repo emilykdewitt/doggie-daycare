@@ -1,12 +1,13 @@
 import React from 'react';
+import firebase from 'firebase';
 
-import myDogs from '../../App/dogs';
+import dogsData from '../../helpers/data/dogsData';
 import DogPen from '../DogPen/DogPen';
 
-import myEmployees from '../../App/employees';
+import employeesData from '../../helpers/data/employeesData';
 import EmployeePen from '../EmployeePen/EmployeePen';
 
-import myWalks from '../../App/walks';
+import walksData from '../../helpers/data/walksData';
 import WalkSchedule from '../WalkSchedule/WalkSchedule';
 
 import WalkForm from '../WalkForm/WalkForm';
@@ -20,29 +21,76 @@ class Home extends React.Component {
     dogs: [],
     employees: [],
     walks: [],
+    newWalk: {},
+    editWalk: {},
+  }
+
+  getWalks = () => {
+    walksData.getWalks(firebase.auth().currentUser.uid)
+      .then(walks => this.setState({ walks }))
+      .catch(err => console.error('could not get walks', err));
+  }
+
+  addNewWalk = (walkObject) => {
+    walksData.addNewWalk(walkObject)
+      .then(() => {
+        this.setState({ newWalk: {} });
+        this.getWalks();
+      })
+      .catch(err => console.error('no new walks', err));
+  };
+
+  getEmployees = () => {
+    employeesData.getEmployees()
+      .then(employees => this.setState({ employees }))
+      .catch(err => console.error('could not get employees', err));
   }
 
   componentDidMount() {
-    this.setState({ dogs: myDogs, employees: myEmployees, walks: myWalks });
+    dogsData.getDogs()
+      .then(dogs => this.setState({ dogs }))
+      .catch(err => console.error('getDogs error', err));
+    this.getWalks();
+    this.getEmployees();
   }
 
-  onSubmit = (fields) => {
-    console.error('App component got: ', fields);
+  deleteWalk = (walkId) => {
+    walksData.deleteWalk(walkId)
+      .then(() => this.getWalks())
+      .catch(err => console.error('could not delete order', err));
   }
 
   render() {
-    const { dogs, employees, walks } = this.state;
+    const {
+      dogs,
+      employees,
+      walks,
+    } = this.state;
     return (
-      <div className="App">
-        <div className="page-title">Doggie Day Care</div>
-        <div className="our-dogs-title">Meet Our Clients!</div>
-        <DogPen dogs={dogs}/>
-        <div className="our-staff-title">Meet Our Staff!</div>
-        <EmployeePen employees={employees}/>
-        <div className="walk-form">New Walk Form</div>
-        <WalkForm onSubmit={fields => this.onSubmit(fields)}/>
-        <div className="our-walks">Walk Schedule</div>
-        <WalkSchedule walks={walks}/>
+      <div className="Home">
+        <div className="row">
+          <div className="col">
+            <WalkForm
+            dogs={ dogs }
+            employees={ employees }
+            walks={ walks }
+            addNewWalk={this.addNewWalk}
+            />
+            <WalkSchedule
+            walks={ walks }
+            dogs={ dogs }
+            employees={ employees }
+            deleteWalk={this.deleteWalk}
+            // editWalks={this.editWalks}
+            />
+            <DogPen
+            dogs={ dogs }
+            />
+            <EmployeePen
+            employees={ employees }
+            />
+          </div>
+        </div>
       </div>
     );
   }

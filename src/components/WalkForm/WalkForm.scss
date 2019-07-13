@@ -1,0 +1,18 @@
+.walkForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+input {
+  border-radius: 8px;
+  -webkit-box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.dogInput, .employeeInput, .timeInput, .dateInput {
+  margin-right: 10px;
+}

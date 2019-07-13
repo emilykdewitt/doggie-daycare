@@ -1,11 +1,14 @@
 import React from 'react';
 import 'firebase/auth';
 
+import './WalkForm.scss';
+
 class WalkForm extends React.Component {
   state = {
     dogId: '',
     employeeId: '',
-    dateTime: '',
+    date: '',
+    time: '',
   };
 
   dogChange = (e) => {
@@ -20,7 +23,12 @@ class WalkForm extends React.Component {
 
   dateChange = (e) => {
     e.preventDefault();
-    this.setState({ dateTime: e.target.value });
+    this.setState({ date: e.target.value });
+  }
+
+  timeChange = (e) => {
+    e.preventDefault();
+    this.setState({ time: e.target.value });
   }
 
   handleSubmit = (e) => {
@@ -31,38 +39,50 @@ class WalkForm extends React.Component {
     const newWalk = {
       dogId: this.state.dogId,
       employeeId: this.state.employeeId,
-      dateTime: this.state.dateTime,
+      date: this.state.date,
+      time: this.state.time,
     };
     addNewWalk(newWalk);
   }
 
   render() {
     const dogs = this.props.dogs.map(dog => (
-      <option key={dog.id} value={dog.name}>{dog.name}</option>
+      <option key={dog.name} value={dog.name}>{dog.name}</option>
     ));
     const employees = this.props.employees.map(employee => (
       <option key={employee.id} value={employee.name}>{employee.name}</option>
     ));
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Select a dog:
-            <select value={this.state.dogId} onChange={this.dogChange}>
-              {dogs}
-            </select>
-            Select a teacher:
-            <select value={this.state.employeeId} onChange={this.employeeChange}>
-              {employees}
-            </select>
-            <input
-              name="newWalk"
-              type="text"
-              value={this.state.dateTime} onChange={this.dateChange} />
-          </label>
-          <input type="submit" value="Submit" onClick={this.handleSubmit}/>
-        </form>
-      </div>
+      <React.Fragment>
+        <h2 className="section-header">Walk Schedule</h2>
+        <div>
+          <form className="walkForm" onSubmit={this.handleSubmit}>
+            <label className="dogInputLabel">Select a dog:</label>
+              <select className="dogInput"value={this.state.dogId} onChange={this.dogChange}>
+                {dogs}
+              </select>
+              <label className="employeeInputLabel">Select an employee:</label>
+              <select className="employeeInput" value={this.state.employeeId} onChange={this.employeeChange}>
+                {employees}
+              </select>
+              <input
+                className="dateInput"
+                name="newWalk"
+                type="text"
+                placeholder="11/15/2019"
+                value={this.state.date}
+                onChange={this.dateChange} />
+              <input
+                className="timeInput"
+                name="newWalk"
+                type="text"
+                placeholder="5:15pm"
+                value={this.state.time}
+                onChange={this.timeChange} />
+            <input className="btn btn-info" type="submit" value="Add New Walk" onClick={this.handleSubmit} />
+          </form>
+        </div>
+      </React.Fragment>
     );
   }
 }

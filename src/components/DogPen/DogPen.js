@@ -21,12 +21,15 @@ class DogPen extends React.Component {
 
   render() {
     const dogComponents = this.state.dogs.map(dog => (
-      <Dog key={dog.id} dog={dog}/>
+      <Dog key={dog.name} dog={dog}/>
     ));
     return (
-      <div className="DogPen d-flex flex-wrap">
-        { dogComponents }
-      </div>
+      <React.Fragment>
+        <h2 className="section-header">Our Dogs</h2>
+        <div className="DogPen d-flex flex-wrap">
+          { dogComponents }
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -25,13 +25,13 @@ class Walk extends React.Component {
     const { walk } = this.props;
     return (
       <div className="Walk col-3">
-        <div className="card" style={{ width: 362 }}>
+        <div className="card">
             <div className="card-body">
-              <h3 className="card-title">{walk.dogId}</h3>
-              <h5 className="card-text">{walk.employeeId}</h5>
-              <h5 className="card-text">{walk.dateTime}</h5>
+              <h3 className="card-title"><strong>Dog: </strong>{walk.dogId}</h3>
+              <h5 className="card-text"><strong>Employee: </strong>{walk.employeeId}</h5>
+              <h5 className="card-text"><strong>Date: </strong>{walk.date}</h5>
+              <h5 className="card-time"><strong>Time: </strong>{walk.time}</h5>
               <button className="btn btn-danger" onClick={this.deleteWalkEvent}>Delete</button>
-              <button className="btn btn-success" onClick={this.editWalkEvent}>Edit</button>
             </div>
         </div>
     </div>

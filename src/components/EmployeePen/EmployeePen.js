@@ -24,9 +24,12 @@ class EmployeePen extends React.Component {
       <Employee key={employee.id} employee={employee}/>
     ));
     return (
-      <div className="EmployeePen d-flex flex-wrap">
-        { employeeComponents }
-      </div>
+      <React.Fragment>
+        <h2 className="section-header">Our Employees</h2>
+        <div className="EmployeePen d-flex flex-wrap">
+          { employeeComponents }
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 import dogsData from '../../helpers/data/dogsData';
 import DogPen from '../DogPen/DogPen';
@@ -68,6 +68,7 @@ class Home extends React.Component {
     } = this.state;
     return (
       <div className="Home">
+        <h2 className="page-title">Doggie Daycare</h2>
         <div className="row">
           <div className="col">
             <WalkForm

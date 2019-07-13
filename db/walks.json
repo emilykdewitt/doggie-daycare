@@ -1,37 +1,44 @@
 {
   "walk1": {
-    "dogId": "dog2",
-    "employeeId": "employee4",
-    "date": "11/25/2019"
+    "dogId": "Snowball",
+    "employeeId": "Bart",
+    "date": "11/25/2019",
+    "time": "8:30am"
   },
   "walk2": {
-    "dogId": "dog3",
-    "employeeId": "employee3",
-    "date": "12/14/2019"
+    "dogId": "Lucky",
+    "employeeId": "Maggie",
+    "date": "12/14/2019",
+    "time": "10:15am"
   },
   "walk3": {
-    "dogId": "dog5",
-    "employeeId": "employee2",
-    "date": "10/14/2019"
+    "dogId": "Bullseye",
+    "employeeId": "Marge",
+    "date": "10/14/2019",
+    "time": "11:30am"
   },
   "walk4": {
-    "dogId": "dog7",
-    "employeeId": "employee5",
-    "date": "10/2/2019"
+    "dogId": "Margaret",
+    "employeeId": "Lisa",
+    "date": "10/2/2019",
+    "time": "9:45am"
   },
   "walk5": {
-    "dogId": "dog2",
-    "employeeId": "employee1",
-    "date": "9/25/2019"
+    "dogId": "Willy",
+    "employeeId": "Homer",
+    "date": "9/25/2019",
+    "time": "6:30am"
   },
   "walk6": {
-    "dogId": "dog4",
-    "employeeId": "employee4",
-    "date": "8/2/2019"
+    "dogId": "George",
+    "employeeId": "Maggie",
+    "date": "8/2/2019",
+    "time": "4:45pm"
   },
   "walk7": {
-    "dogId": "dog6",
+    "dogId": "Bart",
     "employeeId": "employee1",
-    "date": "7/29/2019"
+    "date": "7/29/2019",
+    "time": "6:30pm"
   }
 }
